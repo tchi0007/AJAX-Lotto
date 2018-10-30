@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Lotto</title>
+    <link rel="stylesheet" href="css/main.css?_&amp;d2lSessionVal=WfEG5fJADfvsCjb8wQQrLVtwI" />
+<script type="text/javascript">function lti_launch( vars ) { var query = ''; for(var key in vars) { if(query.length == 0) { query += '?' + key + '=' + encodeURIComponent(vars[key]); } else { query += '&' + key + '=' + encodeURIComponent(vars[key]); } } location.replace( '/d2l/customization/pearsonlti/6606/Launch' + query ); }</script><script type="text/javascript" src="/d2l/common/math/MathML.js?v=10.8.6.13293-31" ></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() { D2LMathML.DesktopInit('https://s.brightspace.com/lib/mathjax/2.6.1/MathJax.js?config=MML_HTMLorMML','https://s.brightspace.com/lib/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML%2cSafe'); });</script><script type="text/javascript">window.addEventListener('message', function(event) { 
+					if( !event.data ) {
+						console.debug( 'Empty event received' );
+						return;
+					}
+					var params = JSON.parse(event.data);
+					if( !params.subject || params.subject !== 'lti.frameResize') {
+						console.debug( 'Message subject was not lti.frameResize' );
+						return;
+					}
+			
+					const MAX_FRAME_HEIGHT = 10000
+					if( !params.height || params.height < 1 || params.height > MAX_FRAME_HEIGHT ) {
+						console.warn( 'Invalid height value received, aborting' );
+						return;
+					}
+					var el = document.getElementsByTagName( 'iframe' );
+					for ( var i=0; i < el.length; i++ ) {
+						if( el[i].contentWindow === event.source ) {
+							el[i].style.height = params.height + 'px';
+                            el[i].style.width = '100%';
+							console.info( 'Setting iFrame height to ' + params.height );
+                            console.info( 'Setting iFrame width to 100%' );
+						}
+					}
+				});</script></head>
+<body>
+    <div id="home" class="page">
+        <header>
+            <h1>Lotto Numbers</h1>
+        </header>
+        <section class="main">
+            <p class="formBox">
+                <label for="digits">Number of Digits</label>
+                <input id="digits" type="number" max="10" min="1" placeholder="6" />
+            </p>
+            <p class="formBox">
+                <label for="max">Range</label>
+                <span>1 to </span><input id="max" type="number" min="2" max="99" placeholder="49" />
+            </p>
+            <p class="formBox buttons">
+                <button id="btnSend">Generate Numbers</button>
+            </p>
+        </section>
+    </div>
+    <div id="list" class="page">
+        <header>
+            <h1>Lotto Numbers</h1>
+        </header>
+        <section class="main">
+            <p id="errorMessage"></p>
+            <ul class="num_list">
+                <!-- display the generated numbers from the server -->
+            </ul>
+            <p>
+                <button id="btnBack">Start Again</button>
+            </p>
+        </section>
+    </div>
+    <script src="js/main.js?_&amp;d2lSessionVal=WfEG5fJADfvsCjb8wQQrLVtwI"></script>
+</body>
+</html>
