@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Montserrat|Open+Sans+Condensed:300');
+
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Montserrat');
+
+
 
 html,
 body {
-    max-width: 500px;
+    
     margin: auto;
     text-align: center;
-    font-size: 30px;
     background-color: hsl(310, 100%, 93%);
   
 }
@@ -18,11 +20,12 @@ h1 {
 }
 
 .formBox {
-    font-family:'Open Sans Condensed';
+    font-family:'Montserrat';
     letter-spacing: .05rem;
     word-spacing: .05rem;
     text-align: center;
-    color: black;
+    color: grey;
+    text-shadow: white 0.2rem 0.2rem;
 }
 
 #btnSend,
@@ -32,3 +35,21 @@ h1 {
     color: black;
 }
 
+
+@media (max-width: 600px){
+    body{
+        font-size: 28px;
+    } 
+}
+
+@media (min-width: 600px) and (max-width:1000px){
+    body{
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 1000px){
+    body{
+        font-size: 35px;
+    }
+}
