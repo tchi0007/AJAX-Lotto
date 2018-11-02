@@ -25,10 +25,29 @@ h1 {
     word-spacing: .05rem;
     text-align: center;
     color: grey;
-    text-shadow: white 0.2rem 0.2rem;
+    text-shadow: white 0.1rem 0.1rem;
+}
+#digits,
+#max{
+    width:3rem;
+    height:3rem;
+    font-size: 20px;
+    text-align: center;
 }
 
-#btnSend,
+
+#btnSend{
+    font-family: 'Montserrat';
+    align-content: center;
+    color: black;
+}
+
+#page{
+    display: block;
+}
+#list{
+    display: none;
+}
 #btnBack{
     font-family: 'Montserrat';
     align-content: center;
