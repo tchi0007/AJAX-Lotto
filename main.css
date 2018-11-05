@@ -1,15 +1,14 @@
-
 @import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Montserrat');
 
 
 
 html,
 body {
-    
+
     margin: auto;
     text-align: center;
     background-color: hsl(310, 100%, 93%);
-  
+
 }
 
 h1 {
@@ -20,55 +19,89 @@ h1 {
 }
 
 .formBox {
-    font-family:'Montserrat';
+    font-family: 'Montserrat';
     letter-spacing: .05rem;
     word-spacing: .05rem;
     text-align: center;
     color: grey;
     text-shadow: white 0.1rem 0.1rem;
 }
+
 #digits,
-#max{
-    width:3rem;
-    height:3rem;
+#max {
+    width: 3rem;
+    height: 3rem;
     font-size: 20px;
     text-align: center;
 }
 
-
-#btnSend{
+#btnSend {
     font-family: 'Montserrat';
     align-content: center;
     color: black;
 }
 
-#page{
-    display: block;
+li {
+    font-family: 'Montserrat';
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    margin: 1rem;
+    width: 5rem;
+    border-radius: 50%;
+    font: 4rem;
+    padding: .75rem;
+    
+    background-color: black;
+    text-align: center;
+
 }
-#list{
+.page{
     display: none;
 }
-#btnBack{
+.active{
+    display: block;
+}
+
+#btnBack {
     font-family: 'Montserrat';
     align-content: center;
     color: black;
 }
 
 
-@media (max-width: 600px){
-    body{
+@media (max-width: 600px) {
+    body {
         font-size: 28px;
-    } 
-}
 
-@media (min-width: 600px) and (max-width:1000px){
-    body{
-        font-size: 32px;
+    }
+    li{
+        display: block;
+        margin: auto;
+        justify-content: center;
+        
+        
     }
 }
 
-@media (min-width: 1000px){
-    body{
+@media (min-width: 600px) and (max-width:1000px) {
+    body {
+        font-size: 32px;
+    }
+    li{
+    display: inline-block;
+    
+
+    }
+  
+
+}
+
+@media (min-width: 1000px) {
+    body {
         font-size: 35px;
+    }
+    li{
+    display: inline-block;
     }
 }
