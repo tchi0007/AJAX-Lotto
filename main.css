@@ -43,7 +43,7 @@ h1 {
 
 li {
     font-family: 'Montserrat';
-    color: white;
+    color: black;
     height: 5rem;
     line-height: 5rem;
     margin: 1rem;
@@ -51,8 +51,8 @@ li {
     border-radius: 50%;
     font: 4rem;
     padding: .75rem;
-    
-    background-color: black;
+    background-image:linear-gradient(to top, hsl(332, 50%, 70%) , white);
+    border: 1px solid white;
     text-align: center;
 
 }
