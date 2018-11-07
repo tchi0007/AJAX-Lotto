@@ -59,9 +59,9 @@ function btnGenerate() {
             }
 
         })
-        .catch(function (err) {
-            alert("Error: " + err.message);
+        .catch(function (error) {
+            alert("Error: enter a number" + error.message);
 
-        });
+        })
 
 }
